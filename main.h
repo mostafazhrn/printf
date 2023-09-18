@@ -13,23 +13,24 @@
 #define F_PLS 2
 #define F_ZERO 4
 /**
- *struct fmt - this represent the struct of function
- *@fmt: this shall represent the form
- *@fn: this shall represent the func
+ * struct fmt - Represents a format specifier and its associated function.
+ * @fmt: The format specifier character.
+ * @fn: A function pointer to the corresponding printing function.
  */
 struct fmt
 {
 char fmt;
-int (*fn)(va list. char[], int, int, int, int);
+int (*fn)(va_list, char[], int, int, int, int);
 };
+
 /**
- *typedef struct fmt fmt_t - this represent the struct of ops
- *@fmt: this shall represent the func form
- *@fm_t: this shall represent the func linked
+ * typedef struct fmt fmt_t - Represents a format specifier and its function.
+ * @fmt: The format specifier character.
+ * @fm_t: A function pointer to the corresponding printing function.
  */
 typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
-int handle _print(const char *fmt, int *i,
+int handle = _print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 int print_char(va_list types, char buffer[],
 int flags, int width, int precision, int size);
