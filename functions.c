@@ -1,15 +1,12 @@
 #include "main.h"
-
-/** PRINT CHAR **/
-
 /**
- * print_char - Prints a char
- * @types: List a of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: Width
- * @precision: Precision specification
- * @size: Size specifier
+ * print_char - this code shall Prints a char
+ * @types: this shall repre a List a of args
+ * @buffer: this represent Buffer array to prnt
+ * @flags: thus shall Calc active flags
+ * @width: this represnt Width
+ * @precision: this represnt Precision specification
+ * @size: tis shall represent Size specifier
  * Return: Number of chars printed
  */
 int print_char(va_list types, char buffer[],
@@ -19,16 +16,15 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/************************* PRINT A STRING *************************/
 /**
  * print_string - Prints a string
- * @types: List a of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * @types: this shall represent List a of arguments
+ * @buffer: this shall represent Buffer array to handle print
+ * @flags: this shall represent Calculates active flags
+ * @width: this shall represent get width.
+ * @precision: this shall represent Precision specification
+ * @size: this shall represent Size specifier
+ * Return: Number of print chars
  */
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -74,15 +70,14 @@ int print_string(va_list types, char buffer[],
 
 	return (write(1, str, length));
 }
-/************************* PRINT PERCENT SIGN *************************/
 /**
  * print_percent - Prints a percent sign
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
+ * @types: this shall represent List of arguments
+ * @buffer: this shall represent Buffer array to handle print
+ * @flags: this shall represent Calculates active flags
+ * @width: this shall represent get width.
+ * @precision: this shall represent Precision specification
+ * @size: this shall represent Size specifier
  * Return: Number of chars printed
  */
 int print_percent(va_list types, char buffer[],
@@ -97,16 +92,15 @@ int print_percent(va_list types, char buffer[],
 	return (write(1, "%%", 1));
 }
 
-/************************* PRINT INT *************************/
 /**
- * print_int - Print int
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * print_int - this code shall Print int
+ * @types: this shall represent Lista of arguments
+ * @buffer: this shall represent Buffer array to handle print
+ * @flags: this shall represent Calculates active flags
+ * @width: this shall represent get width.
+ * @precision: this shall represent Precision specification
+ * @size: this shall represent Size specifier
+ * Return: shall retrun Number of chars printed
  */
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -140,14 +134,12 @@ int print_int(va_list types, char buffer[],
 
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
-
-/************************* PRINT BINARY *************************/
 /**
  * print_binary - Prints an unsigned number
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
+ * @types: this shall represent Lista of arguments
+ * @buffer: this shall represen array to handle print
+ * @flags: this shall represent Calc of active flags
+ * @width: this shall represent width.
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Numbers of char printed.
